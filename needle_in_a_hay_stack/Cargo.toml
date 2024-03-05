@@ -1,0 +1,12 @@
+[package]
+name = "needle_in_a_hay_stack"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+obfstr = "0.4.3"
+rand = "0.8.5"
+text_io = "0.1.12"
+thousands = "0.2.0"
