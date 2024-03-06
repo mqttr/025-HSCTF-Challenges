@@ -1,6 +1,6 @@
 use std::env;
 use itertools::Itertools;
-
+use obfstr::obfstr;
 
 // !0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz
 const PLAINTEXT_SPACE: &str = "Rcp36iuE1wWI5QUjtXnFMPxkl7dyJmTLHAoNDOeCbgVs2rv_zfSqG8YKB49!a0hZ";
@@ -55,7 +55,9 @@ fn main() {
             }
         } 
         if joined.contains("k") {
-            
+            let tmp;
+            let unassuming = obfstr!(tmp = "FLAG");                                      // MAKE SURE TO CHANGE THIS FLAG
+            println!("Flag: {}", encrypt(&String::from(unassuming)).unwrap());
         }
     }
 }
